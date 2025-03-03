@@ -19,7 +19,7 @@ def load(file):
     """Open a text file and return a list of lowercase strings"""
     loaded_txt = None
     try:
-        with open(file,"r") as in_file:
+        with open(file,"r",encoding="utf-8") as in_file:
             loaded_txt = in_file.read().strip().split('\n')
             loaded_txt = [ x.lower() for x in loaded_txt]
 

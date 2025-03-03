@@ -21,7 +21,7 @@ for i in range(end):
     if rev_word[:end-i] in word_list and word[:i] == rev_word[end-i:]:
         pali_list.append((rev_word[:end-i],word))
 
-print(pali_list)
+# print(pali_list)
 
 # word = "grits"
 # end = len(word)
@@ -29,3 +29,7 @@ print(pali_list)
 
 # for i in range(end):
 #     if rev[end-i:]
+
+test_set = {"James", "Kigula", "Orla", "Assimwe"}
+
+print(test_set)
