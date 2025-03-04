@@ -1,28 +1,15 @@
-"""Load a text file as a list
-
-    Arguments:
-    - text file name and file directory if needed
-
-    Exceptions:
-    - IOError if filename not found
-
-    Returns
-    - A list of words in a text file in lower case.
-
-    Requires import sys for error logging in color
-
-"""
-
+"""Python module to load file"""
 import sys
 
-def load(file):
-    """Open a text file and return a list of lowercase strings"""
-    loaded_txt = None
+def load(file_name):
+    """Function that loads a file"""
     try:
-        with open(file,"r",encoding="utf-8") as in_file:
-            loaded_txt = in_file.read().strip().split('\n')
-            loaded_txt = [ x.lower() for x in loaded_txt]
-
+        with open(file_name,"r", encoding="utf-8") as file:
+            loaded_text = file.read().strip().split()
+            loaded_text = [x.lower() for x in loaded_text]
+            return loaded_text
     except IOError as e:
-        print(f"{e}\n Error opening {file}. Terminating program",file=sys.stderr)
-    return loaded_txt
+        print(f"{e}\nError opening {file_name}. Terminating program.",file=sys.stderr)
+        sys.exit(1)
+
+load("2of4brif.txt")

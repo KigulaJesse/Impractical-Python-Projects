@@ -10,5 +10,5 @@ for word in list_of_words:
     if len(word) > 1 and word[::-1] == word:
         palindromes.append(word)
 
-print(f"Number of palindromes found: {len(palindromes)}")
-print(*palindromes, sep="\n")
+# print(f"Number of palindromes found: {len(palindromes)}")
+# print(*palindromes, sep="\n")
