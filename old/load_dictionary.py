@@ -1,7 +1,7 @@
 """Python module to load file"""
 import sys
 
-def load(file_name):
+def load(file_name:str) -> list[str]:
     """Function that loads a file"""
     try:
         with open(file_name,"r", encoding="utf-8") as file:
