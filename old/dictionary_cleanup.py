@@ -7,6 +7,9 @@ end = len(word_list)
 
 
 
+
+
+
 for i in range(end):
     if 0 <= i < len(word_list):
         if len(word_list[i]) == 1:
